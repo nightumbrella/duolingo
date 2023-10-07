@@ -1,9 +1,10 @@
 "use client";
-import Lottie,{ InteractivityProps } from "lottie-react";
+import Lottie, { InteractivityProps } from "lottie-react";
 import firstAnimation from "../lottie-json/4.json";
 import CustomButton from "./customButton";
 import Box from "./box";
 import Header from "./header";
+import LottieAnimation from "./lottieAnimation";
 
 const HomePage = () => {
   console.log(typeof firstAnimation);
@@ -28,20 +29,17 @@ const HomePage = () => {
       {/* hero section */}
       <Box>
         <div className='flex items-center justify-center h-[calc(100vh-80px)]'>
-          <Lottie
+          <LottieAnimation
             animationData={firstAnimation}
-            loop
-            // interactivity={interactivity}
-            className='
-            w-[450px]
-          '
+            className='w-[450px]'
           />
+
           <div
             className='
             flex
             flex-col
             items-center
-            w-[550px]
+            w-[450px]
         '
           >
             <h1
