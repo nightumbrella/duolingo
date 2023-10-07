@@ -1,13 +1,17 @@
 "use client";
 import Lottie, { InteractivityProps } from "lottie-react";
-import firstAnimation from "../lottie-json/4.json";
 import CustomButton from "./customButton";
+import Link from "next/link";
 import Box from "./box";
 import Header from "./header";
 import LottieAnimation from "./lottieAnimation";
-import secondAnimation from "../lottie-json/10.json";
-import thirdAnimation from "../lottie-json/5.json";
-import Link from "next/link";
+import firstAnimation from "../lottie-json/4.json"; // hero animation phone
+import secondAnimation from "../lottie-json/10.json"; //free fan
+import thirdAnimation from "../lottie-json/5.json"; // laboratory animation
+import fourAnimation from "../lottie-json/7.json"; // run the animation
+import fiveAnimation from "../lottie-json/14.json"; // run the motorcycle animation
+import sixAnimation from "../lottie-json/12.json"; // run the motorcycle animation
+import sevenAnimation from "../lottie-json/11.json"; // run the motorcycle animation
 
 const HomePage = () => {
   console.log(typeof firstAnimation);
@@ -84,7 +88,7 @@ const HomePage = () => {
         </div>
       </Box>
       {/* flag carousel */}
-      <div className='border-y  h-[80px] flex items-center justify-between px-[225px]'>
+      <div className='border-y  h-[80px] flex items-center justify-between px-[225px] mb-20'>
         {[1, 2, 3, 4, 5].map((num) => (
           <div key={num}>{num}</div>
         ))}
@@ -92,10 +96,12 @@ const HomePage = () => {
 
       <Box>
         {/* free fun effective */}
-        <div className='flex items-center justify-center gap-x-28'>
+        <div className='flex items-center justify-center gap-x-28 mb-20'>
           <div>
-            <h1 className="text-[48px] text-lime-500 font-semibold">free. fun. effective.</h1>
-            <p className="w-[450px] text-[17px] font-light">
+            <h1 className='text-[48px] text-lime-500 font-semibold mb-3'>
+              free. fun. effective.
+            </h1>
+            <p className='w-[450px] text-[17px] font-light'>
               {`Learning with Duolingo is fun, and `}
               <Link
                 href='/efficacy'
@@ -112,21 +118,75 @@ const HomePage = () => {
 
         {/* backed by science */}
 
-        <div className='flex items-center'>
+        <div className='flex items-center justify-center gap-x-28 mb-20'>
           <LottieAnimation
             animationData={thirdAnimation}
             className='min-w-[450px]'
           />
-          <div>
-            <h1 className="text-[48px] text-lime-500 font-semibold">backed by science</h1>
-            <p>
+          <div className='w-[500px] '>
+            <h1 className='text-[48px] text-lime-500 font-semibold mb-3'>
+              backed by science
+            </h1>
+            <p className='text-[17px] font-light'>
               We use a combination of research-backed teaching methods and
               delightful content to create courses that effectively teach
               reading, writing, listening, and speaking skills!
             </p>
           </div>
         </div>
+
+        {/* stay motivated */}
+
+        <div className='flex items-center justify-center gap-x-28 mb-20'>
+          <div className='w-[500px] '>
+            <h1 className='text-[48px] text-lime-500 font-semibold mb-3'>
+              stay motivated
+            </h1>
+            <p className='text-[17px] font-light'>
+              We make it easy to form a habit of language learning with
+              game-like features, fun challenges, and reminders from our
+              friendly mascot, Duo the owl.
+            </p>
+          </div>
+          <LottieAnimation animationData={fourAnimation} />
+        </div>
+
+        {/* personalized learning */}
+        <div className='flex items-center justify-center gap-x-28 mb-40'>
+          <LottieAnimation animationData={fiveAnimation} />
+          <div className='w-[550px] '>
+            <h1 className='text-[48px] text-lime-500 font-semibold mb-3'>
+              personalized learning
+            </h1>
+            <p className='text-[17px] font-light'>
+              Combining the best of AI and language science, lessons are
+              tailored to help you learn at just the right level and pace.
+            </p>
+          </div>
+        </div>
       </Box>
+
+      {/* learn anytime, anywhere */}
+
+      <div className='relative'>
+        <div className='absolute top-5 left-2/4 -translate-x-2/4'>
+          <h1 className='text-[68px] text-center font-bold text-sky-900'>
+            learn anytime,
+            <br /> anywhere
+          </h1>
+          <div>
+            <button>App store</button>
+            <button>Google play</button>
+          </div>
+        </div>
+        <div>
+          {/* <LottieAnimation animationData={sixAnimation}/> */}
+          <LottieAnimation
+            animationData={sevenAnimation}
+            className='w-full absolute left-0'
+          />
+        </div>
+      </div>
 
       {/* last section */}
     </div>
