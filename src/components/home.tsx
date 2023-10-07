@@ -92,14 +92,14 @@ const HomePage = () => {
 
       <Box>
         {/* free fun effective */}
-        <div className='flex items-center'>
+        <div className='flex items-center justify-center gap-x-28'>
           <div>
             <h1 className="text-[48px] text-lime-500 font-semibold">free. fun. effective.</h1>
-            <p>
+            <p className="w-[450px] text-[17px] font-light">
               {`Learning with Duolingo is fun, and `}
               <Link
                 href='/efficacy'
-                className='text-blue-400'
+                className='text-blue-400 font-semibold'
               >{`research shows that it works!  `}</Link>
               {`With quick, bite-sized lessons, you'll earn points and unlock new levels while gaining real-world communication skills.`}
             </p>
