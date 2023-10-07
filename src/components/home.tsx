@@ -12,6 +12,8 @@ import fourAnimation from "../lottie-json/7.json"; // run the animation
 import fiveAnimation from "../lottie-json/14.json"; // run the motorcycle animation
 import sixAnimation from "../lottie-json/12.json"; // run the motorcycle animation
 import sevenAnimation from "../lottie-json/11.json"; // run the motorcycle animation
+import eightAnimation from "../lottie-json/9.json"; // super duolingo animation
+import SuperDuolingo from "./super-duolingo";
 
 const HomePage = () => {
   console.log(typeof firstAnimation);
@@ -168,13 +170,13 @@ const HomePage = () => {
 
       {/* learn anytime, anywhere */}
 
-      <div className='relative'>
+      <div className='relative h-full mb-[1300px]'>
         <div className='absolute top-5 left-2/4 -translate-x-2/4 z-50 justify-center'>
           <h1 className='text-[68px] text-center font-bold text-sky-900 mb-10'>
             learn anytime,
             <br /> anywhere
           </h1>
-          <div className="flex items-center gap-5 justify-center">
+          <div className='flex items-center gap-5 justify-center'>
             {/* apple store */}
             <button className=' border-2 hover:bg-neutral-300 hover:border-neutral-400 transition bg-neutral-200 border-b-[4px] gap-3 border-neutral-300 py-3 rounded-xl flex items-center px-3'>
               {/* apple logo */}
@@ -225,13 +227,28 @@ const HomePage = () => {
           </div>
         </div>
         <div>
-          {/* <LottieAnimation animationData={sixAnimation}/> */}
+          <LottieAnimation
+            animationData={sixAnimation}
+            className='absolute w-full left-0 top-0'
+          />
           <LottieAnimation
             animationData={sevenAnimation}
             className='w-full absolute left-0'
           />
         </div>
       </div>
+
+      {/* super duolingo */}
+      <div className='bg-slate-800 py-[200px] flex items-center justify-center gap-10'>
+        <LottieAnimation animationData={eightAnimation} />
+        <div className='flex flex-col items-center'>
+          <SuperDuolingo />
+          <CustomButton className='bg-neutral-200 mt-10 hover:bg-neutral-300  transition text-black font-semibold border-neutral-400 border-b-[4px]'>
+            Try 2 weeks for free
+          </CustomButton>
+        </div>
+      </div>
+      {/* super duolingo */}
 
       {/* last section */}
     </div>
