@@ -1,30 +1,37 @@
 "use client";
-import Lottie, { InteractivityProps } from "lottie-react";
+import Lottie,{ InteractivityProps } from "lottie-react";
 import firstAnimation from "../lottie-json/4.json";
 import CustomButton from "./customButton";
 import Box from "./box";
 import Header from "./header";
 
 const HomePage = () => {
-  //   const interactivity: InteractivityProps = {
-  //     mode: "scroll",
-  //     actions: [
-  //       {
-  //         visibility: [0, 1],
-  //         type: "loop",
-  //         frames: [0, 60],
-  //       },
-  //     ],
-  //   };
+  console.log(typeof firstAnimation);
+  // const interactivity: InteractivityProps = {
+  //   mode: "scroll",
+  //   actions: [
+  //     {
+  //       visibility: [0.20, .50],
+  //       type: "loop",
+  //       frames: [0, 200],
+  //     },
+  //     {
+  //       visibility: [0.50, 1.0],
+  //       type: "loop",
+  //       frames: [200, 250],
+  //     },
+  //   ],
+  // };
   return (
     <div className=''>
-        <Header/>
+      <Header />
       {/* hero section */}
       <Box>
         <div className='flex items-center justify-center h-[calc(100vh-80px)]'>
           <Lottie
             animationData={firstAnimation}
             loop
+            // interactivity={interactivity}
             className='
             w-[450px]
           '
@@ -83,6 +90,14 @@ const HomePage = () => {
         {[1, 2, 3, 4, 5].map((num) => (
           <div key={num}>{num}</div>
         ))}
+      </div>
+
+      {/* free fun effective */}
+      <div>
+        <div>
+          <h1>free. fun. effective.</h1>
+          <h2>{`Learning with Duolingo is fun, and research shows that it works! With quick, bite-sized lessons, you'll earn points and unlock new levels while gaining real-world communication skills.`}</h2>
+        </div>
       </div>
     </div>
   );
