@@ -5,6 +5,9 @@ import CustomButton from "./customButton";
 import Box from "./box";
 import Header from "./header";
 import LottieAnimation from "./lottieAnimation";
+import secondAnimation from "../lottie-json/10.json";
+import thirdAnimation from "../lottie-json/5.json";
+import Link from "next/link";
 
 const HomePage = () => {
   console.log(typeof firstAnimation);
@@ -29,10 +32,7 @@ const HomePage = () => {
       {/* hero section */}
       <Box>
         <div className='flex items-center justify-center h-[calc(100vh-80px)]'>
-          <LottieAnimation
-            animationData={firstAnimation}
-            className='w-[450px]'
-          />
+          <LottieAnimation animationData={firstAnimation} />
 
           <div
             className='
@@ -90,13 +90,45 @@ const HomePage = () => {
         ))}
       </div>
 
-      {/* free fun effective */}
-      <div>
-        <div>
-          <h1>free. fun. effective.</h1>
-          <h2>{`Learning with Duolingo is fun, and research shows that it works! With quick, bite-sized lessons, you'll earn points and unlock new levels while gaining real-world communication skills.`}</h2>
+      <Box>
+        {/* free fun effective */}
+        <div className='flex items-center'>
+          <div>
+            <h1 className="text-[48px] text-lime-500 font-semibold">free. fun. effective.</h1>
+            <p>
+              {`Learning with Duolingo is fun, and `}
+              <Link
+                href='/efficacy'
+                className='text-blue-400'
+              >{`research shows that it works!  `}</Link>
+              {`With quick, bite-sized lessons, you'll earn points and unlock new levels while gaining real-world communication skills.`}
+            </p>
+          </div>
+          <LottieAnimation
+            animationData={secondAnimation}
+            className='min-w-[450px]'
+          />
         </div>
-      </div>
+
+        {/* backed by science */}
+
+        <div className='flex items-center'>
+          <LottieAnimation
+            animationData={thirdAnimation}
+            className='min-w-[450px]'
+          />
+          <div>
+            <h1 className="text-[48px] text-lime-500 font-semibold">backed by science</h1>
+            <p>
+              We use a combination of research-backed teaching methods and
+              delightful content to create courses that effectively teach
+              reading, writing, listening, and speaking skills!
+            </p>
+          </div>
+        </div>
+      </Box>
+
+      {/* last section */}
     </div>
   );
 };

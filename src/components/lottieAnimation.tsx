@@ -1,5 +1,6 @@
 import Lottie from "lottie-react";
 import { FC } from "react";
+import {twMerge} from 'tailwind-merge'
 
 interface LottieAnimationProps {
   animationData?: object;
@@ -18,7 +19,9 @@ const LottieAnimation: FC<LottieAnimationProps> = ({
       animationData={animationData}
       loop
       {...props}
-      className={className}
+      className={twMerge(`
+      w-[450px]
+      `,className)}
     ></Lottie>
   );
 };
