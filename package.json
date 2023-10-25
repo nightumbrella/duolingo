@@ -14,11 +14,11 @@
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^1.14.0",
-    "uninstall": "^0.0.0"
+    "typescript-json-schema": "^0.62.0"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/react": "^18.2.32",
     "@types/react-dom": "^18",
     "autoprefixer": "^10",
     "eslint": "^8",
