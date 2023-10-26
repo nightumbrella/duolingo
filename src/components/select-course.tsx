@@ -14,7 +14,7 @@ const SelectCourse = () => {
 
   return (
     <div className="px-[400px] border-y mb-20 relative">
-      <div className="overflow-hidden border">
+      <div className="overflow-hidden ">
         {/* left arrow for slider */}
         <button
           onClick={leftSlide}
