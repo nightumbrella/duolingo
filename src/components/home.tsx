@@ -6,7 +6,7 @@ import Box from "./box";
 import Header from "./header/header";
 import LottieAnimation from "./lottieAnimation";
 import firstAnimation from "../lottie-json/4.json"; // hero animation phone
-import eightAnimation from "../lottie-json/9.json"; // super duolingo animation
+
 import SuperDuolingo from "./super-duolingo";
 // import { useRef, useEffect, useState } from "react";
 import StayMotivated from "./lottie-components/stay-motivated";
@@ -17,6 +17,7 @@ import LearningAnyTimeAnywhere from "./lottie-components/learning-anytime-anywhe
 import { flagData } from "@/constants/flag";
 import Image from "next/image";
 import SelectCourse from "./select-course";
+import SuperDuolingoSection from "./lottie-components/super-duolingo";
 
 const HomePage = () => {
   // const interactivity: InteractivityProps = {
@@ -110,15 +111,7 @@ const HomePage = () => {
       <LearningAnyTimeAnywhere />
 
       {/* super duolingo */}
-      <div className="bg-slate-800 py-[200px] flex items-center justify-center gap-10">
-        <LottieAnimation animationData={eightAnimation} />
-        <div className="flex flex-col items-center">
-          <SuperDuolingo />
-          <CustomButton className="bg-neutral-200 mt-10 hover:bg-neutral-300  transition text-black font-semibold border-neutral-400 border-b-[4px]">
-            Try 2 weeks for free
-          </CustomButton>
-        </div>
-      </div>
+      <SuperDuolingoSection />
       {/* super duolingo */}
 
       {/* last section */}

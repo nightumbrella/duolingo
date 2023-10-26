@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 
 const SelectCourse = () => {
-  const sliderRef = useRef();
   const [currentSlide, setCurrentSlide] = useState(0);
   const leftSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? flagData.length - 6 : prev - 1));
@@ -62,7 +61,7 @@ const SelectCourse = () => {
           className={`h-[80px] transition duration-300 z-20 select-none flex items-center gap-20`}
         >
           {flagData.map((data, index) => (
-            <Link href={data.title} key={index}>
+            <Link href={`course/${data.title}`} key={index}>
               <div className="flex items-center gap-1 ">
                 <Image width={40} src={data.flag} alt="flag" className="" />
                 <h5 className="font-semibold uppercase text-neutral-400">
