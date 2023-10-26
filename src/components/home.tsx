@@ -93,7 +93,7 @@ const HomePage = () => {
         </div>
       </Box>
       {/* flag carousel  */}
-      <SelectCourse/>
+      <SelectCourse />
       <Box>
         {/* free fun effective */}
         <FreeFanEffective />
