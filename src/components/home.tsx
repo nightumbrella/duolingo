@@ -7,7 +7,7 @@ import Header from "./header";
 import LottieAnimation from "./lottieAnimation";
 import firstAnimation from "../lottie-json/4.json"; // hero animation phone
 
-import thirdAnimation from "../lottie-json/5.json"; // laboratory animation
+
 
 import fiveAnimation from "../lottie-json/14.json"; // run the motorcycle animation
 import sixAnimation from "../lottie-json/12.json"; // run the motorcycle animation
@@ -17,6 +17,7 @@ import SuperDuolingo from "./super-duolingo";
 import { useRef, useEffect, useState } from "react";
 import StayMotivated from "./lottie-components/stay-motivated";
 import FreeFanEffective from "./lottie-components/free-fun-effective";
+import BackendByScience from "./lottie-components/backed-by-science";
 
 const HomePage = () => {
  
@@ -105,22 +106,7 @@ const HomePage = () => {
 
         {/* backed by science */}
 
-        <div className="flex items-center justify-center gap-x-28 mb-20">
-          <LottieAnimation
-            animationData={thirdAnimation}
-            className="min-w-[450px]"
-          />
-          <div className="w-[500px] ">
-            <h1 className="text-[48px] text-lime-500 font-semibold mb-3">
-              backed by science
-            </h1>
-            <p className="text-[17px] font-light">
-              We use a combination of research-backed teaching methods and
-              delightful content to create courses that effectively teach
-              reading, writing, listening, and speaking skills!
-            </p>
-          </div>
-        </div>
+       <BackendByScience/>
 
         {/* stay motivated */}
 
