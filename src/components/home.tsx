@@ -6,7 +6,7 @@ import Box from "./box";
 import Header from "./header";
 import LottieAnimation from "./lottieAnimation";
 import firstAnimation from "../lottie-json/4.json"; // hero animation phone
-import secondAnimation from "../lottie-json/10.json"; //free fan
+
 import thirdAnimation from "../lottie-json/5.json"; // laboratory animation
 
 import fiveAnimation from "../lottie-json/14.json"; // run the motorcycle animation
@@ -16,6 +16,7 @@ import eightAnimation from "../lottie-json/9.json"; // super duolingo animation
 import SuperDuolingo from "./super-duolingo";
 import { useRef, useEffect, useState } from "react";
 import StayMotivated from "./lottie-components/stay-motivated";
+import FreeFanEffective from "./lottie-components/free-fun-effective";
 
 const HomePage = () => {
  
@@ -100,25 +101,7 @@ const HomePage = () => {
 
       <Box>
         {/* free fun effective */}
-        <div className="flex items-center justify-center gap-x-28 mb-20">
-          <div>
-            <h1 className="text-[48px] text-lime-500 font-semibold mb-3">
-              free. fun. effective.
-            </h1>
-            <p className="w-[450px] text-[17px] font-light">
-              {`Learning with Duolingo is fun, and `}
-              <Link
-                href="/efficacy"
-                className="text-blue-400 font-semibold"
-              >{`research shows that it works!  `}</Link>
-              {`With quick, bite-sized lessons, you'll earn points and unlock new levels while gaining real-world communication skills.`}
-            </p>
-          </div>
-          <LottieAnimation
-            animationData={secondAnimation}
-            className="min-w-[450px]"
-          />
-        </div>
+        <FreeFanEffective/>
 
         {/* backed by science */}
 

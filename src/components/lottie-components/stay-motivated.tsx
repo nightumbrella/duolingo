@@ -1,32 +1,33 @@
-import React, { MutableRefObject, useEffect, useRef, useState } from "react";
-import LottieAnimation from "../lottieAnimation";
+import React, {  useEffect, useRef } from "react";
+// import LottieAnimation from "../lottieAnimation";
 //import fourAnimation from "../lottie-json/7.json"; // run the animation
 import fourAnimation from "../../lottie-json/7.json";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
+import { handleScroll } from "./utils/handle-scroll";
 
 const StayMotivated = () => {
   const lottieRef = useRef<LottieRefCurrentProps | null>(null);
   const boxRef = useRef<HTMLDivElement | null>(null);
   // const [animate, setAnimate] = useState(false);
   useEffect(() => {
-    const handleScroll = () => {
-      if (lottieRef.current && boxRef.current) {
-        const element = lottieRef.current;
-        // const boxRefAction = boxRef.current;
-        const rect: DOMRect = boxRef.current.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
+    // const handleScroll = () => {
+    //   if (lottieRef.current && boxRef.current) {
+    //     const element = lottieRef.current;
+    //     // const boxRefAction = boxRef.current;
+    //     const rect: DOMRect = boxRef.current.getBoundingClientRect();
+    //     const viewportHeight = window.innerHeight;
 
-        if (rect.top < viewportHeight / 2 && rect.bottom > viewportHeight / 2) {
-          element.play();
-        } else {
-          element.pause();
-        }
-      }
-    };
+    //     if (rect.top < viewportHeight / 2 && rect.bottom > viewportHeight / 2) {
+    //       element.play();
+    //     } else {
+    //       element.pause();
+    //     }
+    //   }
+    // };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll",() =>  handleScroll(lottieRef,boxRef));
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll",() =>  handleScroll(lottieRef,boxRef));
     };
   }, []);
   return (
