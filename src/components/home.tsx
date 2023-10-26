@@ -8,7 +8,7 @@ import LottieAnimation from "./lottieAnimation";
 import firstAnimation from "../lottie-json/4.json"; // hero animation phone
 import eightAnimation from "../lottie-json/9.json"; // super duolingo animation
 import SuperDuolingo from "./super-duolingo";
-import { useRef, useEffect, useState } from "react";
+// import { useRef, useEffect, useState } from "react";
 import StayMotivated from "./lottie-components/stay-motivated";
 import FreeFanEffective from "./lottie-components/free-fun-effective";
 import BackendByScience from "./lottie-components/backed-by-science";
@@ -16,9 +16,9 @@ import { PersonalizedLearning } from "./lottie-components/personalized-learning"
 import LearningAnyTimeAnywhere from "./lottie-components/learning-anytime-anywhere";
 import { flagData } from "@/constants/flag";
 import Image from "next/image";
+import SelectCourse from "./select-course";
 
 const HomePage = () => {
- 
   // const interactivity: InteractivityProps = {
   //   mode: "scroll",
   //   actions: [
@@ -37,7 +37,7 @@ const HomePage = () => {
   return (
     <div className="">
       <Header />
-     
+
       {/* hero section */}
       <Box>
         <div className="flex items-center justify-center h-[calc(100vh-80px)]">
@@ -92,29 +92,22 @@ const HomePage = () => {
           </div>
         </div>
       </Box>
-      {/* flag carousel */}
-      <div className="border-y  h-[80px] flex items-center justify-between px-[225px] mb-20">
-        {flagData.map((data,index) => (
-          <div key={index} className="flex items-center gap-1">
-            <Image width={40} src={data.flag} alt="flag" className=""/>
-            <h5 className="font-semibold uppercase text-neutral-400">{data.title}</h5>
-          </div>
-        ))}
-      </div>
+      {/* flag carousel  */}
+      <SelectCourse/>
       <Box>
         {/* free fun effective */}
-        <FreeFanEffective/>
+        <FreeFanEffective />
         {/* backed by science */}
-       <BackendByScience/>
+        <BackendByScience />
         {/* stay motivated */}
-       <StayMotivated/>
+        <StayMotivated />
         {/* personalized learning */}
-       <PersonalizedLearning/>
+        <PersonalizedLearning />
       </Box>
 
       {/* learn anytime, anywhere */}
 
-      <LearningAnyTimeAnywhere/>
+      <LearningAnyTimeAnywhere />
 
       {/* super duolingo */}
       <div className="bg-slate-800 py-[200px] flex items-center justify-center gap-10">

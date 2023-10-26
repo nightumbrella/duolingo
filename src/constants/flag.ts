@@ -14,27 +14,27 @@ import turkish from "../../public/flag/turkish.svg";
 import chinese from "../../public/flag/chinese.svg";
 export const flagData = [
   {
-    title: "Spanish",
+    title: "spanish",
     flag: spanishFlag,
   },
   {
-    title: "French",
+    title: "french",
     flag: french,
   },
   {
-    title: "Italian",
+    title: "italian",
     flag: italian,
   },
   {
-    title: "PORTUGUESE",
+    title: "portuguese",
     flag: portuguese,
   },
   {
-    title: "Chinese",
+    title: "chinese",
     flag: chinese,
   },
   {
-    title: "Dutch",
+    title: "dutch",
     flag: dutch,
   },
   {
