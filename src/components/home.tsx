@@ -14,6 +14,8 @@ import FreeFanEffective from "./lottie-components/free-fun-effective";
 import BackendByScience from "./lottie-components/backed-by-science";
 import { PersonalizedLearning } from "./lottie-components/personalized-learning";
 import LearningAnyTimeAnywhere from "./lottie-components/learning-anytime-anywhere";
+import { flagData } from "@/constants/flag";
+import Image from "next/image";
 
 const HomePage = () => {
  
@@ -92,8 +94,11 @@ const HomePage = () => {
       </Box>
       {/* flag carousel */}
       <div className="border-y  h-[80px] flex items-center justify-between px-[225px] mb-20">
-        {[1, 2, 3, 4, 5].map((num) => (
-          <div key={num}>{num}</div>
+        {flagData.map((data,index) => (
+          <div key={index} className="flex items-center gap-1">
+            <Image width={40} src={data.flag} alt="flag" className=""/>
+            <h5 className="font-semibold uppercase text-neutral-400">{data.title}</h5>
+          </div>
         ))}
       </div>
       <Box>
