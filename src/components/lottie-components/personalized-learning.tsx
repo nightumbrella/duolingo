@@ -31,7 +31,7 @@ export const PersonalizedLearning = () => {
         };
     }, []);
   return (
-    <div className="flex items-center justify-center gap-x-28 mb-48">
+    <div className="flex items-center justify-center gap-x-28 mb-48" ref={boxRef}>  
          <Lottie
         animationData={fiveAnimation}
         lottieRef={lottieRef}
