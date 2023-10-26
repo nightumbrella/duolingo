@@ -3,14 +3,9 @@ import Lottie, { InteractivityProps } from "lottie-react";
 import CustomButton from "./customButton";
 import Link from "next/link";
 import Box from "./box";
-import Header from "./header";
+import Header from "./header/header";
 import LottieAnimation from "./lottieAnimation";
 import firstAnimation from "../lottie-json/4.json"; // hero animation phone
-
-
-
-
-
 import eightAnimation from "../lottie-json/9.json"; // super duolingo animation
 import SuperDuolingo from "./super-duolingo";
 import { useRef, useEffect, useState } from "react";
@@ -40,6 +35,7 @@ const HomePage = () => {
   return (
     <div className="">
       <Header />
+     
       {/* hero section */}
       <Box>
         <div className="flex items-center justify-center h-[calc(100vh-80px)]">

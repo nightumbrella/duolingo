@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import CustomButton from "./customButton";
+import CustomButton from "../customButton";
 import { useEffect, useRef, useState } from "react";
 
 const Header = () => {
@@ -34,3 +34,4 @@ const Header = () => {
 };
 
 export default Header;
+
