@@ -9,7 +9,7 @@ import firstAnimation from "../lottie-json/4.json"; // hero animation phone
 
 
 
-import fiveAnimation from "../lottie-json/14.json"; // run the motorcycle animation
+
 import sixAnimation from "../lottie-json/12.json"; // run the motorcycle animation
 import sevenAnimation from "../lottie-json/11.json"; // run the motorcycle animation
 import eightAnimation from "../lottie-json/9.json"; // super duolingo animation
@@ -18,6 +18,7 @@ import { useRef, useEffect, useState } from "react";
 import StayMotivated from "./lottie-components/stay-motivated";
 import FreeFanEffective from "./lottie-components/free-fun-effective";
 import BackendByScience from "./lottie-components/backed-by-science";
+import { PersonalizedLearning } from "./lottie-components/personalized-learning";
 
 const HomePage = () => {
  
@@ -99,32 +100,15 @@ const HomePage = () => {
           <div key={num}>{num}</div>
         ))}
       </div>
-
       <Box>
         {/* free fun effective */}
         <FreeFanEffective/>
-
         {/* backed by science */}
-
        <BackendByScience/>
-
         {/* stay motivated */}
-
        <StayMotivated/>
-
         {/* personalized learning */}
-        <div className="flex items-center justify-center gap-x-28 mb-48">
-          <LottieAnimation animationData={fiveAnimation} />
-          <div className="w-[550px] ">
-            <h1 className="text-[48px] text-lime-500 font-semibold mb-3">
-              personalized learning
-            </h1>
-            <p className="text-[17px] font-light">
-              Combining the best of AI and language science, lessons are
-              tailored to help you learn at just the right level and pace.
-            </p>
-          </div>
-        </div>
+       <PersonalizedLearning/>
       </Box>
 
       {/* learn anytime, anywhere */}
