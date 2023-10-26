@@ -5,16 +5,15 @@ import fourAnimation from "../../lottie-json/7.json";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 
 const StayMotivated = () => {
-  const lottieRef =
-    useRef<MutableRefObject<LottieRefCurrentProps | null>>(null);
+  const lottieRef = useRef<LottieRefCurrentProps | null>(null);
   const boxRef = useRef<HTMLDivElement | null>(null);
   // const [animate, setAnimate] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      if (lottieRef.current) {
+      if (lottieRef.current && boxRef.current) {
         const element = lottieRef.current;
-        const boxRefAction = boxRef.current;
-        const rect = boxRefAction.getBoundingClientRect();
+        // const boxRefAction = boxRef.current;
+        const rect: DOMRect = boxRef.current.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
 
         if (rect.top < viewportHeight / 2 && rect.bottom > viewportHeight / 2) {
@@ -45,13 +44,13 @@ const StayMotivated = () => {
           the owl.
         </p>
       </div>
-      <LottieAnimation animationData={fourAnimation} ref={lottieRef} />
-      {/* <Lottie
+      {/* <LottieAnimation animationData={fourAnimation} ref={lottieRef} /> */}
+      <Lottie
         animationData={fourAnimation}
         lottieRef={lottieRef}
         loop
         className="w-[450px]"
-      ></Lottie> */}
+      ></Lottie>
     </div>
   );
 };

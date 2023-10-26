@@ -6,7 +6,7 @@ interface LottieAnimationProps {
   animationData?: object;
   animationFn?: () => void;
   className?: string;
-  ref?:MutableRefObject<LottieRefCurrentProps | null>;
+  ref?: LottieRefCurrentProps | null;
 }
 
 const LottieAnimation: FC<LottieAnimationProps> = ({
@@ -18,7 +18,7 @@ const LottieAnimation: FC<LottieAnimationProps> = ({
 }) => {
   return (
     <Lottie
-      lottieRef={ref}
+      // lottieRef={ref}
       animationData={animationData}
       loop
       {...props}
