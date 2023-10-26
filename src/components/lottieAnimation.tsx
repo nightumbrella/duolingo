@@ -1,12 +1,12 @@
-import Lottie from "lottie-react";
-import { FC, RefObject, forwardRef } from "react";
+import Lottie, { LottieRefCurrentProps } from "lottie-react";
+import { FC, MutableRefObject, RefObject, forwardRef } from "react";
 import { twMerge } from "tailwind-merge";
 
 interface LottieAnimationProps {
   animationData?: object;
   animationFn?: () => void;
   className?: string;
-  ref?: RefObject<HTMLDivElement>;
+  ref?:MutableRefObject<LottieRefCurrentProps | null>;
 }
 
 const LottieAnimation: FC<LottieAnimationProps> = ({
@@ -18,7 +18,7 @@ const LottieAnimation: FC<LottieAnimationProps> = ({
 }) => {
   return (
     <Lottie
-      // lottieRef={ref}
+      lottieRef={ref}
       animationData={animationData}
       loop
       {...props}

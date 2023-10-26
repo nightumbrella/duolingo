@@ -1,24 +1,26 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 import LottieAnimation from "../lottieAnimation";
 //import fourAnimation from "../lottie-json/7.json"; // run the animation
 import fourAnimation from "../../lottie-json/7.json";
-import Lottie from "lottie-react";
+import Lottie, { LottieRefCurrentProps } from "lottie-react";
 
 const StayMotivated = () => {
-  const lottieRef = useRef(null);
+  const lottieRef =
+    useRef<MutableRefObject<LottieRefCurrentProps | null>>(null);
+  const boxRef = useRef<HTMLDivElement | null>(null);
   // const [animate, setAnimate] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       if (lottieRef.current) {
         const element = lottieRef.current;
-        const rect = element.getBoundingClientRect();
+        const boxRefAction = boxRef.current;
+        const rect = boxRefAction.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
-        console.log(viewportHeight);
 
         if (rect.top < viewportHeight / 2 && rect.bottom > viewportHeight / 2) {
-          lottieRef.current.play();
+          element.play();
         } else {
-          lottieRef.current.pause();
+          element.pause();
         }
       }
     };
@@ -29,7 +31,10 @@ const StayMotivated = () => {
     };
   }, []);
   return (
-    <div className="flex items-center justify-center gap-x-28 mb-20">
+    <div
+      className="flex items-center justify-center gap-x-28 mb-20 "
+      ref={boxRef}
+    >
       <div className="w-[500px] ">
         <h1 className="text-[48px] text-lime-500 font-semibold mb-3">
           stay motivated
@@ -40,13 +45,13 @@ const StayMotivated = () => {
           the owl.
         </p>
       </div>
-      {/* <LottieAnimation animationData={fourAnimation} /> */}
-      <Lottie
+      <LottieAnimation animationData={fourAnimation} ref={lottieRef} />
+      {/* <Lottie
         animationData={fourAnimation}
         lottieRef={lottieRef}
         loop
         className="w-[450px]"
-      ></Lottie>
+      ></Lottie> */}
     </div>
   );
 };
