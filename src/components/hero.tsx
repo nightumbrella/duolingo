@@ -6,8 +6,7 @@ import LottieAnimation from "./lottieAnimation";
 // import heroLottie from '../lottie-json/hero.lottie'
 import firstAnimation from "../lottie-json/4.json"; // hero animation phone
 import Lottie from "lottie-react";
-import { Controls, DotLottiePlayer } from "@dotlottie/react-player";
-import "@dotlottie/player-component";
+import {  DotLottiePlayer } from "@dotlottie/react-player";
 import "@dotlottie/react-player/dist/index.css";
 
 const Hero = () => {
