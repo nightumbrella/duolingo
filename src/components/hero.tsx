@@ -38,13 +38,13 @@ const Hero = () => {
       {/* <Lottie
         animationData={firstAnimation}
         loop
-        className="w-[450px]"
       ></Lottie> */}
-      {/* <DotLottiePlayer
-        src={"https://static9.lottiefiles.com/lotties/01_ramen_character.lottie"}
+      <DotLottiePlayer
+        src={"https://lottie.host/fb1ce92e-e4c0-4d3a-842e-9c8b712f1227/PRdQRd71cZ.lottie"}
         autoplay
+        className="!w-[450px]"
         loop
-      ></DotLottiePlayer> */}
+      ></DotLottiePlayer>
        {/* <dotlottie-player
         src="../lottie-json/hero.lottie.json"
         autoplay
