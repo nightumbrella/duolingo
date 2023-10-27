@@ -7,7 +7,7 @@ import LottieAnimation from "./lottieAnimation";
 import firstAnimation from "../lottie-json/4.json"; // hero animation phone
 import Lottie from "lottie-react";
 import { Controls, DotLottiePlayer } from "@dotlottie/react-player";
-import '@dotlottie/player-component';
+import "@dotlottie/player-component";
 import "@dotlottie/react-player/dist/index.css";
 
 const Hero = () => {
@@ -36,22 +36,27 @@ const Hero = () => {
     <div className="flex items-center justify-center h-[calc(100vh-80px)]">
       {/* <LottieAnimation animationData={firstAnimation} /> */}
       {/* <Lottie
-        animationData={firstAnimation}
-        loop
-      ></Lottie> */}
+        // animationData={firstAnimation}
+        // loop
+        // className="!w-[450px]"
+        // ></Lottie> */}
+
       <DotLottiePlayer
-        src={"https://lottie.host/fb1ce92e-e4c0-4d3a-842e-9c8b712f1227/PRdQRd71cZ.lottie"}
+        src={
+          "https://lottie.host/fb1ce92e-e4c0-4d3a-842e-9c8b712f1227/PRdQRd71cZ.lottie"
+        }
         autoplay
         className="!w-[450px]"
         loop
       ></DotLottiePlayer>
-       {/* <dotlottie-player
+
+      {/* <dotlottie-player
         src="../lottie-json/hero.lottie.json"
         autoplay
         loop
         style={{ height: '100%', width: '100%' }}
       /> */}
-      
+
       {/* <lottie-player src="" background="#ffffff"  speed="1"  style="width: 300px; height: 300px;" hover loop controls autoplay></lottie-player> */}
       <div
         className="
