@@ -13,8 +13,8 @@ import React from "react";
 const Welcome = () => {
   const router = useRouter();
   const onClick = () => {
-    router.push("welcome-step")
-  }
+    router.push("welcome-step");
+  };
   return (
     <div className="flex items-center justify-center w-full">
       <div className="relative mt-20">
