@@ -1,6 +1,7 @@
 "use client";
 import LottieAnimation from "@/components/lottieAnimation";
 import React from "react";
+import a from "../../../public/check.svg";
 // ↓↓↓ for welcome route assets
 // import happyDuo from "../../../public/welcome/happyDuo.json";
 // import heyDuo from "../../../public/welcome/heyDuo.json";
@@ -11,7 +12,8 @@ const Welcome = () => {
   return (
     <div>
       <LottieAnimation />
-      <h1>Welcome</h1>
+      <h1></h1>
+      {a}
     </div>
   );
 };
